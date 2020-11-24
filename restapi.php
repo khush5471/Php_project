@@ -22,10 +22,12 @@ $result = $objQueries->readDataFromDb();
 $cat_arr = array();
 $cat_arr['data_view'] = array();
 
+
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         //                echo '<p></p>'.$row["name"];
 
+        
         extract($row);
         $cat_item = array(
             'id' => $id, //==$row["id"]
